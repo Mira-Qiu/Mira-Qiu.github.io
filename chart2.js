@@ -30,7 +30,7 @@ d3.csv("data.csv", function (d) {
     svg.append('g')
         .attr("class",'y axis')
         .call(d3.axisLeft(yScale));
-    
+    svg.append("circle").attr("cx",xScale(2012)).attr("cy",yScale(162014)).attr("r",10).attr("fill","red");
     //CALL LINE
     var line = d3.line()
                 .x(function(d){return xScale(d.year)})

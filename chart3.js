@@ -36,6 +36,7 @@ d3.csv("data.csv", function (d) {
                 .x(function(d){return xScale(d.year)})
                 .y(function(d){return yScale(d.salaryto)})
                 .curve(d3.curveMonotoneX);
+                svg.append("circle").attr("cx",xScale(2012)).attr("cy",yScale(60740)).attr("r",10).attr("fill","red");
     svg.append("path")
         .datum(data)
         .attr("class","linehigh")
