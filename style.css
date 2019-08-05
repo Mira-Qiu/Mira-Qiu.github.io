@@ -4,17 +4,17 @@
 
 .line{
     fill:none;
-    stroke: rgb(221, 67, 67);
+    stroke: rgb(245, 216, 51);
     stroke-width: 3;
 }
 .linelow{
     fill:none;
-    stroke: aqua;
+    stroke: rgb(149, 173, 12);
     stroke-width: 3;
 }
 .linehigh{
     fill:none;
-    stroke: rgb(195, 67, 221);
+    stroke: rgb(75, 76, 77);
     stroke-width: 3;
 }
 .overlay{
@@ -23,7 +23,7 @@
 }
 
 .dot{
-    fill:#fc1e30;
+    fill:#b1a9aa;
     stroke:#fff;
 }
 .point{

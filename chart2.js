@@ -53,6 +53,8 @@ d3.csv("data.csv", function (d) {
             svg.append('text')
                 .text(text)
                 .attr("id",text)
+                .transition()
+                .duration(500)
                 .attr("x", xScale(d.year) - 30)
                 .attr("y", yScale(d.salaryfrom) - 50)
                 .attr('text-anchor', "middle")
