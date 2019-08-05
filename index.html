@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>NYC jobs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://d3js.org/d3-selection-multi.v0.4.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <script src="https://rawgit.com/susielu/d3-annotation/master/d3-annotation.min.js"></script>
+    <script type="text/javascript" src="chart2.js"></script>
+    <script type="text/javascript" src="chart3.js"></script>
+    <script type="text/javascript" src="chart4.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+    <div id="header">
+        <h2>NYC Jobs: Narrative Visualization</h2>
+        <h4>By Mingming Qiu</h4>
+    </div>
+    <div class="row">
+        <!--page tab-->
+        <div class="column side">
+            <div class="tab">
+                <button class="tablinks" onclick="openPage(event,'1')">1</button>
+                <button class="tablinks" onclick="openPage(event,'2')">2</button>
+                <button class="tablinks" onclick="openPage(event,'3')">3</button>
+                <button class="tablinks" onclick="openPage(event,'4')">4</button>
+            </div>
+        </div>
+        <div class="column right">
+            <div class="contentChart">
+                <div id="1" class="chart">
+                    <h3>1</h3>
+                    <p>Over view of New York City Job Positions</p>
+                    <div id="yearChart"></div>
+                </div>
+
+                <div id="2" class="chart">
+                    <h3>2</h3>
+                    <p>What is the salary range in New York City?</p>
+                    <div id="salaryChart"></div>
+                </div>
+
+                <div id="3" class="chart">
+                    <h3>3</h3>
+                    <p>slow chart grow to 2015</p>
+                    <div id="firstchart"></div>
+                </div>
+                <div id="4" class="chart">
+                    <h3>4</h3>
+                    <p>slow chart from 2016 until 2019</p>
+                    <div id="lastchart"></div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div id="footer">
+        <p> About | Privicy Policy | Contact | FAQ </p>
+        <p> Copyright @ 2019 Mingming Qiu. All right reserved</p>
+    </div>
+    <script>
+    </script>
+
+</body>
+
+</html>
