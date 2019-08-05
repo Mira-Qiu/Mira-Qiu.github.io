@@ -56,13 +56,14 @@ d3.csv("data.csv",function(d){
                 .x(function(d){return xScale(d.year);})
                 .y(function(d){return yScale(d.pos);})
                 .curve(d3.curveMonotoneX);
-  
+  svg.append("circle").attr("cx",xScale(2018)).attr("cy",yScale(1778)).attr("r",10).attr("fill","red");
   svg.append("path")
       .datum(data)
       .transition().duration(500)
       .attr("class","line")
       .attr("d",line);
   //STEP 4: CIRCLE OUT POINT
+
   svg.selectAll(".dot")
       .data(data)
       .enter().append("circle")
@@ -71,7 +72,7 @@ d3.csv("data.csv",function(d){
       .attr("cy",function(d){return yScale(d.pos)})
       .attr("r",5)
       .on("mouseenter",function(d){
-        var text = ["Year: "+ d.year, "\n\ Positions :"+d.pos];
+        var text = ["Year: "+ d.year, " Positions :"+d.pos];
           d3.select(this).attr('class','point').attr('r',radius *2)
                           .transition().duration(1000)
           svg.append('text')
