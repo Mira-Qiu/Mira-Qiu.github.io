@@ -59,6 +59,7 @@ d3.csv("data.csv",function(d){
   
   svg.append("path")
       .datum(data)
+      .transition().duration(500)
       .attr("class","line")
       .attr("d",line);
   //STEP 4: CIRCLE OUT POINT
@@ -69,21 +70,21 @@ d3.csv("data.csv",function(d){
       .attr("cx",function(d){return xScale(d.year)})
       .attr("cy",function(d){return yScale(d.pos)})
       .attr("r",5)
-      .on("mouseover",function(d){
+      .on("mouseenter",function(d){
         var text = ["Year: "+ d.year, "\n\ Positions :"+d.pos];
-          d3.select(this).attr('class','point').attr('r',radius *2);
+          d3.select(this).attr('class','point').attr('r',radius *2)
+                          .transition().duration(1000)
           svg.append('text')
             .text(text)
             .attr("id",text)
+            .transition().duration(500)
             .attr("x",xScale(d.year) - 30)
-             .attr('y',yScale(d.pos) - 50)
+             .attr('y',yScale(d.pos) - 30)
               .attr('text-anchor',"middle")
       })
-      .on("mousemove",function(d){
-        d3.select(this).attr({
-          class: "dot",
-          r: radius
-        })
+      .on("mouseout",function(d){
+        d3.select(this).select("text")
+			    .remove();
       });
 
   //STEP 5: MOUSE
